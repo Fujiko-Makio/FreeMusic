@@ -6,8 +6,10 @@ class Music < ApplicationRecord
   belongs_to :user
   has_one_attached :sound
 
+
+
   with_options presence: true do
-    validates :sound
+    validates :sound, blob: { content_type: ['audio/mpeg', 'audio/mp3'] }
     validates :musics_name
     validates :description
   end
