@@ -37,12 +37,11 @@ ActiveRecord::Schema.define(version: 2021_04_29_103510) do
     t.string "musics_name", null: false
     t.text "description", null: false
     t.integer "price", null: false
-    t.integer "genre", null: false
-    t.integer "instruments", null: false
+    t.integer "genre_id", null: false
+    t.integer "image_id", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "sounds"
     t.index ["user_id"], name: "index_musics_on_user_id"
   end
 
