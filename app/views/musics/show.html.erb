@@ -1,0 +1,52 @@
+<%= render "shared/header" %>
+
+  <div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @music.musics_name %>
+    </h2>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= @music.user.nickname %>
+      </span>
+    </div>
+  <% if user_signed_in? %>
+    <% if current_user.id == @music.user_id %>
+      <%#= link_to "商品の編集", edit_item_path, method: :get, class: "item-red-btn" %>
+      <p class="or-text">or</p>
+      <%#= link_to "削除", item_path, method: :delete, class:"item-destroy" %>
+    <% else %>
+      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
+    <% end %>
+  <% end %>
+    <div class="item-explain-box">
+      <span><%= @music.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">作曲者</th>
+          <td class="detail-value"><%= @music.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ジャンル</th>
+          <td class="detail-value"><%= @music.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">雰囲気</th>
+          <td class="detail-value"><%= @music.image.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+    </div>
+  </div>
+  <%# /商品の概要 %>
+  <a href="#" class="another-item"><%= @music.genre.name %>をもっと見る</a>
+</div>
+
+<%= render "shared/footer" %>

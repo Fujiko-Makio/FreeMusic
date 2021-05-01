@@ -21,10 +21,19 @@
     <h2 class='title'>販売中楽曲、BGM</h2>
     <%= link_to '新規投稿楽曲', "#", class: "subtitle" %>
     <ul class='item-lists'>
-      <% @musics.sound.each do |file| %>
-        <li>
-          <%= image_tag file %>
-        </li>
+    
+      <%= @musics.each do |f| %>
+        <li class="list">
+          <%= link_to music_path(f.id) do %>
+          <div class='item-img-content'>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              <%= f.musics_name %>
+            </h3>
+            <h2 class="items-name">
+              <%= f.user.nickname %>
+          </div>
+          <% end %>
       <% end %>
     </ul>
   </div>
