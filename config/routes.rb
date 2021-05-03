@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'musics/index'
   root to: 'musics#index'
   resources :musics, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :users, only: :show
 end

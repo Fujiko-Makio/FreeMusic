@@ -20,14 +20,13 @@
       <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
     <% end %>
   <% end %>
-    <div class="item-explain-box">
-      <span><%= @music.description %></span>
+    <div class="item-explain-box"> 
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-item">作曲者</th>
-          <td class="detail-value"><%= @music.user.nickname %></td>
+          <th class="detail-item">曲の説明</th>
+          <td class="detail-value"><%= @music.description %></td>
         </tr>
         <tr>
           <th class="detail-item">ジャンル</th>
