@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+
+  <div class="item-show">
+  <div class="item-box">
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= "#{@user.nickname}さんのプロフィール" %>
+      </span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">苗字</th>
+          <td class="detail-value"><%= @user.first_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">名前</th>
+          <td class="detail-value"><%= @user.last_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">誕生日</th>
+          <td class="detail-value"><%= @user.birthday %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= "#{@user.nickname}さんの投稿楽曲一覧" %>
+      </span>
+    </div>
+    <%# binding.pry %>
+    <% @musics.each do |f| %>
+
+      <div class="item-explain-box">
+      <li>
+        <%= f.musics_name %>
+      </li>
+        <audio src="<%= rails_blob_path(f.sound) %>" type="audio/mp3" controls></audio>
+      </div>
+      <div class="option">
+        <div class="favorite-btn">
+          <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+          <span>お気に入り 0</span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%# /商品の概要 %>
+</div>
+
+<%= render "shared/footer" %>
