@@ -3,18 +3,19 @@
   <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @music.musics_name %>
+      <%= "作曲者: #{@music.user.nickname}" %>
     </h2>
     <div class="item-price-box">
       <span class="item-price">
-        <%= @music.user.nickname %>
+        <%= "曲名: #{@music.musics_name}" %>
       </span>
     </div>
   <% if user_signed_in? %>
     <% if current_user.id == @music.user_id %>
-      <%#= link_to "商品の編集", edit_item_path, method: :get, class: "item-red-btn" %>
+      <%= link_to "編集する", edit_music_path, method: :get, class: "item-red-btn" %>
       <p class="or-text">or</p>
-      <%#= link_to "削除", item_path, method: :delete, class:"item-destroy" %>
+      <%= link_to "削除する", music_path, method: :delete, class:"item-destroy" %>
+      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
     <% else %>
       <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
     <% end %>

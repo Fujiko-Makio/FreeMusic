@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2021_04_29_103510) do
   create_table "musics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "musics_name", null: false
     t.text "description", null: false
-    t.integer "price", null: false
     t.integer "genre_id", null: false
     t.integer "image_id", null: false
     t.bigint "user_id"
