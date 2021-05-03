@@ -18,8 +18,8 @@
 
   <%#= "商品一覧" %>
   <div class='item-contents'>
-    <h2 class='title'>販売中楽曲、BGM</h2>
-    <%= link_to '新規投稿楽曲', "#", class: "subtitle" %>
+    <h2 class='title'>~ 新規楽曲、BGM一覧 ~</h2>
+    <%= link_to '新→古', "#", class: "subtitle" %>
     <ul class='item-lists'>
     
       <% @musics.each do |f| %>
@@ -29,10 +29,10 @@
             <div class='item-img-content'>
               <div class='item-info'>
                 <h3 class='item-name'>
-                  <%= f.musics_name %>
+                  <%= "曲名: #{f.musics_name}" %>
                 </h3>
                 <h2 class="items-name">
-                  <%= f.user.nickname %>
+                  <%= "作曲者: #{f.user.nickname}" %>
                 </h2>
               </div>
             </div>
