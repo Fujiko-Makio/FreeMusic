@@ -30,9 +30,9 @@
     </div>
     <% @musics.each do |f| %>
       <div class="item-explain-box">
-      <li>
-        <%= f.musics_name %>
-      </li>
+      <p>
+        <%= "曲名: #{f.musics_name}" %>
+      </p>
         <audio src="<%= rails_blob_path(f.sound) %>" type="audio/mp3" controls></audio>
       </div>
       <div class="option">

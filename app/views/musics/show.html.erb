@@ -20,8 +20,15 @@
       <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
     <% end %>
   <% end %>
-    <div class="item-explain-box"> 
+  <% if user_signed_in? %>
+    <div class="item-explain-box">
     </div>
+  <% else %>
+    <div class="item-explain-box"> 
+    <p>楽曲の視聴は会員登録してください</p>
+    <%= link_to "新規登録はこちら", new_user_registration_path %>
+    </div>
+  <% end %>
     <table class="detail-table">
       <tbody>
         <tr>
