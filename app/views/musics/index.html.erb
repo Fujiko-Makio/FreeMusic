@@ -22,17 +22,17 @@
     <%= link_to '新規投稿順 ⇨', "#", class: "subtitle" %>
     <ul class='item-lists'>
     
-      <% @musics.each do |f| %>
+      <% @musics.each do |music| %>
         <li class="list">
-          <%= link_to music_path(f.id) do %>
+          <%= link_to music_path(music.id) do %>
           <%= image_tag "radio.png", :size => '100x100' %>
             <div class='item-img-content'>
               <div class='item-info'>
                 <h3 class='item-name'>
-                  <%= "曲名: #{f.musics_name}" %>
+                  <%= "曲名: #{music.musics_name}" %>
                 </h3>
                 <h2 class="items-name">
-                  <%= "作曲者: #{f.user.nickname}" %>
+                  <%= "作曲者: #{music.user.nickname}" %>
                 </h2>
               </div>
             </div>

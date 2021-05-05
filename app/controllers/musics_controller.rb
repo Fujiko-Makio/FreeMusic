@@ -1,6 +1,11 @@
 class MusicsController < ApplicationController
+  before_action :search_product
+
+
   def index
     @musics = Music.all.order("created_at DESC")
+    @products = Product.all
+    set_product_column
   end
 
   def new
@@ -39,12 +44,25 @@ class MusicsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @results = @p.result.includes(:music)
+  end
+
 
 
 
 
   private 
+
   def music_params
     params.require(:music).permit(:musics_name, :description, :genre_id, :image_id, :sound).merge(user_id: current_user.id)
+  end
+
+  def search_product
+    @p = Product.ransack(params[:q])
+  end
+  
+  def set_product_column
+    @product_name = Product.select("name").distinct  # 重複なくnameカラムのデータを取り出す
   end
 end
