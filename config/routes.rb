@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   resources :musics
 
   resources :users, only: :show
-  #root 'products#index'
-  #get 'products/search'
+  
 end

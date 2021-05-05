@@ -6,10 +6,12 @@
     </a>
   </div>
   <div class='nav'>
+  <%= search_form_for @p, url: products_search_path do |f| %>
     <ul class='lists-left'>
-      <li><%= link_to 'ジャンルから探す', "/", class: "category-list" %></li>
-      <li><%= link_to '楽器から探す', "#", class: "brand-list" %></li>
+      <li><%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: 'ジャンルで探す', class: "category-list" %></li>
+      <li><%= class: "brand-list" %></li>
     </ul>
+  <% end %>
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to "ようこそ！ #{current_user.nickname} さん", "/users/#{current_user.id}", id: "lists", class: "user-nickname" %></li>

@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:category)  # 検索条件にマッチした商品の情報を取得
+    @results = @p.result.includes(:music)  # 検索条件にマッチした商品の情報を取得
   end
 
   private
