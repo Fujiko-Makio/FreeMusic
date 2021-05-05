@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/search'
   devise_for :users
   get 'musics/index'
   root to: 'musics#index'
-  resources :musics, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :musics
+
   resources :users, only: :show
-  root 'products#index'
-  get 'products/search'
+  #root 'products#index'
+  #get 'products/search'
 end
