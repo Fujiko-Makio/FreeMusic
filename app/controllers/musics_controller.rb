@@ -4,7 +4,6 @@ class MusicsController < ApplicationController
 
   def index
     @musics = Music.all.order("created_at DESC")
-    #@products = Product.all
   end
 
   def new

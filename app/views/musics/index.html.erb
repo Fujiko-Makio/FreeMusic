@@ -7,18 +7,20 @@
       きっと見つかる
     </h2>
     <p class='service-explain'>
-      自分の音楽を売ることができて
+      気に入った音楽をダウンロード
     </p>
+  <% if user_signed_in? %>
     <p class='service-explain'>
-      気に入った音楽は買うこともできる
+  <%= link_to '楽曲の投稿はこちら', new_music_path %>
     </p>
+<% end %>
   </div>
   <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
 
 
   <%#= "商品一覧" %>
   <div class='item-contents'>
-    <h2 class='title'>~ 新規楽曲、BGM一覧 ~</h2>
+    <h2 class='title'>- 新規楽曲、BGM一覧 -</h2>
     <%= link_to '新規投稿順 ⇨', "#", class: "subtitle" %>
     <ul class='item-lists'>
     
@@ -43,10 +45,4 @@
   </div>
   <%# /商品一覧 %>
 </div>
-<% if user_signed_in? %>
-  <%= link_to(new_music_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>投稿</span>
-    <%= image_tag 'onnpu.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-  <% end %>
-<% end %>
 <%= render "shared/footer" %>
