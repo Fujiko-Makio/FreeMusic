@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <%# 画面上部 %>
   <div class='title-contents'>
     <h2 class='service-title'>
       きっと見つかる
@@ -15,10 +15,10 @@
     </p>
   <% end %>
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+  <%# /画面上部 %>
 
 
-  <%#= "商品一覧" %>
+  <%#= "一覧表示" %>
   <div class='item-contents'>
     <h2 class='title'>- 新規楽曲、BGM一覧 -</h2>
     <%= link_to '新規投稿順 ⇨', "#", class: "subtitle" %>
@@ -27,8 +27,9 @@
       <% @musics.each do |music| %>
         <li class="list">
           <%= link_to music_path(music.id) do %>
-          <%= image_tag "radio.png", :size => '100x100' %>
             <div class='item-img-content'>
+              <%= image_tag "radio.png", :size => '100x100' %>
+            </div>
               <div class='item-info'>
                 <h3 class='item-name'>
                   <%= "曲名: #{music.musics_name}" %>
@@ -37,12 +38,11 @@
                   <%= "作曲者: #{music.user.nickname}" %>
                 </h2>
               </div>
-            </div>
           <% end %>
         </li>
       <% end %>
     </ul>
   </div>
-  <%# /商品一覧 %>
+  <%# "一覧表示" %>
 </div>
 <%= render "shared/footer" %>
