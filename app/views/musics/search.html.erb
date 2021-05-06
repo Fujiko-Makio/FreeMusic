@@ -1,0 +1,23 @@
+<h1>
+  検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+<%#binding.pry%>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+      <%= result.genre.name %>
+      <%= result.image.name %>
+      <%= result.musics_name %>
+      <%= result.user.nickname %>
+      <audio src="<%= rails_blob_path(result.sound) %>" type="audio/mp3" controls></audio>
+      <%#= result. %>
+    </li>
+  <% end %>
+<% else %>
+  該当する商品はありません
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>

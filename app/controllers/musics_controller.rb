@@ -4,8 +4,7 @@ class MusicsController < ApplicationController
 
   def index
     @musics = Music.all.order("created_at DESC")
-    @products = Product.all
-    set_product_column
+    #@products = Product.all
   end
 
   def new
@@ -45,7 +44,7 @@ class MusicsController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:music)
+    @results = @p.result.includes(:user)
   end
 
 
@@ -59,10 +58,7 @@ class MusicsController < ApplicationController
   end
 
   def search_product
-    @p = Product.ransack(params[:q])
+    @p = Music.ransack(params[:q])
   end
-  
-  def set_product_column
-    @product_name = Product.select("name").distinct  # 重複なくnameカラムのデータを取り出す
-  end
+
 end

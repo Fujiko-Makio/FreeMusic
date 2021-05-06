@@ -5,7 +5,6 @@ class Music < ApplicationRecord
 
   belongs_to :user
   has_one_attached :sound
-  has_many :category
 
 
 

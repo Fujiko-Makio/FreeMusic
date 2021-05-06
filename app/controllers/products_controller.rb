@@ -7,11 +7,12 @@ class ProductsController < ApplicationController
   end
 
   def search
+    binding.pry
     @results = @p.result.includes(:music)
   end
 
   private
   def search_product
-    @p = Product.ransack(params[:q])
+    @p = Music.ransack(params[:q])
   end
 end

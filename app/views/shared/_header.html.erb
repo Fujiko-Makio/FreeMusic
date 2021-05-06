@@ -6,7 +6,7 @@
     </a>
   </div>
   <div class='nav'>
-  <%= search_form_for @p, url: products_search_path do |f| %>
+  <%= search_form_for @p, url: musics_index_path do |f| %>
     <ul class='lists-left'>
       <li><%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: 'ジャンルで探す', class: "category-list" %></li>
       <li><%= f.collection_select :image_id_eq, Image.where.not(id: 0), :id, :name,  include_blank: '雰囲気で探す', class: "brand-list" %></li>
