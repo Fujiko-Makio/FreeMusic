@@ -21,6 +21,15 @@
   color: #f5f5f5;
 }
 
+.search-bar-message {
+  display: flex;
+}
+
+.search-bar-message h2 {
+  color: #f5f5f5;
+  margin-right: 55px;
+}
+
 .furima-icon {
   width: 10vw;
   margin-right: 10vw;

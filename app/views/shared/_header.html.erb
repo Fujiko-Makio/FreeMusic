@@ -5,11 +5,15 @@
       <h1>FreeMusic</h1>
     </a>
   </div>
+  <div class='search-bar-message'>
+    <h2>ジャンルで探す</h2>
+    <h2>雰囲気で探す</h2>
+  </div>
   <div class='nav'>
   <%= search_form_for @p, url: musics_index_path do |f| %>
     <ul class='lists-left'>
-      <li><%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: 'ジャンルで探す', class: "category-list" %></li>
-      <li><%= f.collection_select :image_id_eq, Image.where.not(id: 0), :id, :name,  include_blank: '雰囲気で探す', class: "brand-list" %></li>
+      <li><%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name, class: "category-list" %></li>
+      <li><%= f.collection_select :image_id_eq, Image.where.not(id: 0), :id, :name, class: "brand-list" %></li>
       <li><%= f.submit '検索' %></li>
     </ul>
   <% end %>
