@@ -32,6 +32,14 @@ a {
   line-height: 40px;
 }
 
+.post-music a {
+  color: rgb(241, 88, 88);
+}
+
+.post-music a:hover {
+  opacity: 0.5;
+}
+
 .store-btn {
   display: flex;
   margin-top: 24px;
