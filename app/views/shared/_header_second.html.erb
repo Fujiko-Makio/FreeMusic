@@ -6,6 +6,11 @@
     </a>
   </div>
   <div class='nav'>
+    <ul class='lists-left'>
+      <li class="category-list"></li>
+      <li class="brand-list" ></li>
+      <li></li>
+    </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to "ようこそ！ #{current_user.nickname} さん", "/users/#{current_user.id}", id: "lists", class: "user-nickname" %></li>

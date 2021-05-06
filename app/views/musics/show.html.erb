@@ -1,5 +1,5 @@
 <%= render "shared/header_second" %>
-
+  <%# <%= 曲の詳細 %>
   <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -45,10 +45,11 @@
         </tr>
       </tbody>
     </table>
-    <div class="option">
+    <div class="top-page-link">
+      <%= link_to 'トップページへ戻る', root_path %>
     </div>
   </div>
-  <%# /曲の概要 %>
+  <%# /曲の詳細 %>
 </div>
 
 <%= render "shared/footer" %>

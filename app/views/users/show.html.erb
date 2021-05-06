@@ -35,11 +35,8 @@
       </p>
         <audio src="<%= rails_blob_path(f.sound) %>" type="audio/mp3" controls></audio>
       </div>
-      <div class="option">
-        <div class="favorite-btn">
-          <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-          <span>お気に入り 0</span>
-        </div>
+      <div class="top-page-link">
+        <%= link_to 'トップページへ戻る', root_path %>
       </div>
     <% end %>
   </div>

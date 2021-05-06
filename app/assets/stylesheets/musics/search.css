@@ -1,0 +1,26 @@
+.item-show h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.item-price-box {
+  font-weight: bold;
+}
+
+.item-price-box h2 {
+  font-weight: bold;
+}
+
+.item-price-box p {
+  font-size: 30px;
+}
+
+.top-page-link {
+  text-align: center;
+}
+
+.top-page-link a {
+  font-weight: bold;
+  color: #ea352d;
+  font-size: 25px;
+}

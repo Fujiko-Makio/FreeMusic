@@ -2,7 +2,7 @@
   
   <div class="item-show">
     <h1>
-      検索結果
+      - 検索結果 -
     </h1>
   </div>
   <div class="item-price-box">
@@ -24,7 +24,10 @@
         </li>
       <% end %>
     <% else %>
-      該当する商品はありません
+      <p>該当する商品はありません</p>
     <% end %>
+  </div>
+  <div class="top-page-link">
     <%= link_to 'トップページへ戻る', root_path %>
+  </div>
 <%= render "shared/footer" %>
