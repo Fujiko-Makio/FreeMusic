@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_05_093853) do
+ActiveRecord::Schema.define(version: 2021_04_29_103510) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -44,15 +44,6 @@ ActiveRecord::Schema.define(version: 2021_05_05_093853) do
     t.index ["user_id"], name: "index_musics_on_user_id"
   end
 
-  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "genre_id", null: false
-    t.integer "image_id", null: false
-    t.bigint "music_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["music_id"], name: "index_products_on_music_id"
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -73,5 +64,4 @@ ActiveRecord::Schema.define(version: 2021_05_05_093853) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "musics", "users"
-  add_foreign_key "products", "musics"
 end
