@@ -1,5 +1,6 @@
 class MusicsController < ApplicationController
   before_action :search_product
+  before_action :authenticate_user!, only: [:new, :create, :edit]
 
 
   def index
