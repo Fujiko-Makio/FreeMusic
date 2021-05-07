@@ -1,6 +1,7 @@
 class MusicsController < ApplicationController
   before_action :search_product
-  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
 
 
   def index
@@ -59,6 +60,12 @@ class MusicsController < ApplicationController
 
   def search_product
     @p = Music.ransack(params[:q])
+  end
+
+  def move_to_index
+    if  current_user != @music
+      redirect_to root_path 
+    end
   end
 
 end

@@ -14,7 +14,9 @@
           <%= "曲名: #{result.musics_name}" %>
         </span>
       </div>
-      <audio src="<%= rails_blob_path(result.sound) %>" type="audio/mp3" controls></audio>
+      <% if user_signed_in? %>
+        <audio src="<%= rails_blob_path(result.sound) %>" type="audio/mp3" controls></audio>
+      <% end %>
       <h2 class="name">
         <%= link_to "作曲者: #{result.user.nickname}", user_path(result.user) %>
       </h2>
