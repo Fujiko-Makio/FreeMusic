@@ -1,24 +1,34 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| birthday           | date   | null: false               |
+| first_name         | string | null: false               |
+| last_name          | string | null: false               |
+| first_name_kana    | string | null: false               |
+| last_name_kana     | string | null: false               |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :musics
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## musics テーブル
 
-* Database initialization
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| musics_name      | string     | null: false                    |
+| description      | text       | null: false                    |
+| genre   _id      | integer    | null: false                    |
+| image_id         | integer    | null: false                    |
+| user             | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- belongs_to :user
 
-* Deployment instructions
 
-* ...
