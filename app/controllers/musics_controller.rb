@@ -1,6 +1,7 @@
 class MusicsController < ApplicationController
   before_action :search_product
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :set_music, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
 
 
@@ -22,15 +23,12 @@ class MusicsController < ApplicationController
   end
 
   def show
-    @music = Music.find(params[:id])
   end
 
   def edit
-    @music = Music.find(params[:id])
   end
 
   def update
-    @music = Music.find(params[:id])
     if @music.update(music_params)
       redirect_to music_path(@music)
     else
@@ -39,7 +37,6 @@ class MusicsController < ApplicationController
   end
 
   def destroy
-    @music = Music.find(params[:id])
     @music.destroy
     redirect_to root_path
   end
@@ -66,6 +63,10 @@ class MusicsController < ApplicationController
     if  current_user != @music
       redirect_to root_path 
     end
+  end
+
+  def set_music
+    @music = Music.find(params[:id])
   end
 
 end
