@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   get 'musics/index', to: 'musics#search'
   resources :musics
   resources :users, only: :show
-  
 end
