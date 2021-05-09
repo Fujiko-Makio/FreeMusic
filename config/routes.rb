@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'musics#index'
   get 'musics/index', to: 'musics#search'
+  root to: 'musics#index'
+  
   resources :musics
-  resources :users, only: :show
+  resources :users, only: [:show]
 end
