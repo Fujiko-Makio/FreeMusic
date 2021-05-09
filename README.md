@@ -129,4 +129,4 @@ VSCode
 - belongs_to :user
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/17475b1ad92972ad82dee3bd2a4132a0.png)](https://gyazo.com/17475b1ad92972ad82dee3bd2a4132a0)
+[![Image from Gyazo](https://i.gyazo.com/4e1797116c76fc5a99333b56881c6508.png)](https://gyazo.com/4e1797116c76fc5a99333b56881c6508)
