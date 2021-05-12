@@ -46,7 +46,8 @@
 [![Image from Gyazo](https://i.gyazo.com/15f2512647c9be636b702de54aab775f.png)](https://gyazo.com/15f2512647c9be636b702de54aab775f)
 ログインしているユーザーが別のユーザーが投稿した詳細画面では再生ボタンのみの表示になります。
 [![Image from Gyazo](https://i.gyazo.com/3e11b6eeb68009db6155d7868f5578f3.png)](https://gyazo.com/3e11b6eeb68009db6155d7868f5578f3)
-ログアウトしている場合は詳細ページに遷移しても再生ボタンは表示されません。
+ログアウトしている場合は詳細ページに遷移しても再生ボタンは表示されません。また新規登録ページへのリンクが表示されるようになっています。
+[![Image from Gyazo](https://i.gyazo.com/fb53b40d22778ebbe4f06305512d1ee4.png)](https://gyazo.com/fb53b40d22778ebbe4f06305512d1ee4)
 ## カテゴリー検索機能
 ログインの有無にかかわらずカテゴリー検索をすることが可能になっています。
 検索後、一覧表示された楽曲の試聴についてはログインしているユーザーのみ可能となっています。
