@@ -11,7 +11,7 @@
 ## ・ トップページ
 ### ログインしている場合は投稿画面へのリンクが表示されるようになっており、ログインしていない場合は新規登録ボタンが表示されるようになっています。
 ### ・ ログイン時
-[![Image from Gyazo](https://i.gyazo.com/c38e970a0c003fb226f475df5b0cc750.png)](https://gyazo.com/c38e970a0c003fb226f475df5b0cc750)
+[![Image from Gyazo](https://i.gyazo.com/859f8e727b3973dddf5237da2b199eaa.jpg)](https://gyazo.com/859f8e727b3973dddf5237da2b199eaa)
 ### ・ 非ログイン時
 [![Image from Gyazo](https://i.gyazo.com/36547bbc7cf0c3ef70ca86d09ad8bb3d.jpg)](https://gyazo.com/36547bbc7cf0c3ef70ca86d09ad8bb3d)
 ### ・ 投稿された楽曲が新着順に一覧表示されるようになっています。
@@ -72,28 +72,28 @@
 
 # 🌐 使用技術(開発環境)
 ## バックエンド
-Ruby, Ruby on Rails
+### Ruby, Ruby on Rails
 
 ## フロントエンド
-HTML, CSS, SCSS
+### HTML, CSS, SCSS
 
 # データベース
-MySQL, SequelPro
+### MySQL, SequelPro
 
 # Webサーバー(本番環境)
-Heroku
+### Heroku
 
 # アプリケーションサーバー(本番環境)
-Heroku
+### Heroku
 
 # ソース管理
-GitHub, GitHub Desktop
+### GitHub, GitHub Desktop
 
 # テスト
-RSpec
+### RSpec
 
 # エディタ
-VSCode
+### VSCode
 
 # 🌐 DB設計
 
