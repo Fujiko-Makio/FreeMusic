@@ -83,9 +83,6 @@
 # Webサーバー(本番環境)
 ### Heroku
 
-# アプリケーションサーバー(本番環境)
-### Heroku
-
 # ソース管理
 ### GitHub, GitHub Desktop
 
