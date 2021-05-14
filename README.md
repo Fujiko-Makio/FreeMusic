@@ -10,11 +10,11 @@
 
 ## ・ トップページ
 ### ログインしている場合は投稿画面へのリンクが表示されるようになっており、ログインしていない場合は新規登録ボタンが表示されるようになっています。
-### ロクイン時
+### ・ ログイン時
 [![Image from Gyazo](https://i.gyazo.com/c38e970a0c003fb226f475df5b0cc750.png)](https://gyazo.com/c38e970a0c003fb226f475df5b0cc750)
-### 非ログイン時
+### ・ 非ログイン時
 [![Image from Gyazo](https://i.gyazo.com/36547bbc7cf0c3ef70ca86d09ad8bb3d.jpg)](https://gyazo.com/36547bbc7cf0c3ef70ca86d09ad8bb3d)
-### 投稿された楽曲が新着順に一覧表示されるようになっています。
+### ・ 投稿された楽曲が新着順に一覧表示されるようになっています。
 [![Image from Gyazo](https://i.gyazo.com/5d12d4f703a6e39bc31d10f8d90810bc.jpg)](https://gyazo.com/5d12d4f703a6e39bc31d10f8d90810bc)
 ## ・カテゴリー検索機能
 ### Active_Hash、ransackを導入し、ログインの有無にかかわらずカテゴリー検索をすることが可能になっています。
