@@ -1,5 +1,5 @@
 # アプリ名
-## <a href="https://obscure-spire-59218.herokuapp.com/">🌐 FreeMusic</a>
+## <a href="https://obscure-spire-59218.herokuapp.com/"> 🎶FreeMusic</a>
 ### ユーザー同士で楽曲の共有ができるアプリケーション
 [![Image from Gyazo](https://i.gyazo.com/0b4173e7cb426a3cbb6d5cfd0c63269f.jpg)](https://gyazo.com/0b4173e7cb426a3cbb6d5cfd0c63269f)
 # 概要・制作背景
