@@ -5,6 +5,7 @@ class CreateMusics < ActiveRecord::Migration[6.0]
       t.text :description,         null: false
       t.integer :genre_id,            null: false
       t.integer :image_id,      null: false
+      t.integer :price
       t.references :user,   foreign_key: true
       t.timestamps
     end

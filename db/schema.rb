@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_05_18_112302) do
     t.text "description", null: false
     t.integer "genre_id", null: false
     t.integer "image_id", null: false
+    t.integer "price"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -45,9 +46,12 @@ ActiveRecord::Schema.define(version: 2021_05_18_112302) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "price", null: false
+    t.bigint "user_id"
+    t.bigint "music_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["music_id"], name: "index_orders_on_music_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,4 +74,6 @@ ActiveRecord::Schema.define(version: 2021_05_18_112302) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "musics", "users"
+  add_foreign_key "orders", "musics"
+  add_foreign_key "orders", "users"
 end
