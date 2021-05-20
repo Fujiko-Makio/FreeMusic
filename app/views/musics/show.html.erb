@@ -15,9 +15,9 @@
       <%= link_to "編集する", edit_music_path, method: :get, class: "item-red-btn" %>
       <p class="or-text">or</p>
       <%= link_to "削除する", music_path, method: :delete, class:"item-destroy" %>
-      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
+      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls controlslist="nodownload"></audio>
     <% else %>
-      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls></audio>
+      <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls controlslist="nodownload"></audio>
     <% end %>
   <% end %>
   <% if user_signed_in? %>
