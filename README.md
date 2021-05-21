@@ -75,7 +75,7 @@
 ### Ruby, Ruby on Rails
 
 ## フロントエンド
-### HTML, CSS, SCSS
+### HTML, CSS
 
 # データベース
 ### MySQL, SequelPro
