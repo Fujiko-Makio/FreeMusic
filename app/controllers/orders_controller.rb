@@ -6,14 +6,19 @@ class OrdersController < ApplicationController
 
   def create
     @oder = Order.new(order_params)
-    @order.save
-    return 
+    if @order.valid?
+      pay_item
+      @order.save
+      redirect_to root_path
+    else
+      render :index
+    end
   end
 
   private
 
   def order_params
-    params.require(:order).permit(:price)
+    params.require(:order).permit(:price).merge(user_id: current_user.id, music_id: params[:music_id], token: params[:token])
   end
 
 end
