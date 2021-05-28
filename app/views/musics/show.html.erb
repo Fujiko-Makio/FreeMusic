@@ -22,7 +22,7 @@
   <% end %>
   <% if user_signed_in? %>
     <div class="item-explain-box">
-    <%= link_to "楽曲の購入はこちら", music_orders_path %>
+    <%= link_to "楽曲の購入はこちら", music_orders_path(@music) %>
     </div>
   <% else %>
     <div class="item-explain-box"> 
