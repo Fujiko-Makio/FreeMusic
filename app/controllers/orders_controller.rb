@@ -1,11 +1,11 @@
 class OrdersController < ApplicationController
 
   def index
-    @order = Order.find(params[:music_id])
+    @order = Music.find(params[:music_id])
   end
 
   def create
-    @order = Order.find(params[:music_id])
+    @order = Music.find(params[:music_id])
     if @order.valid?
       pay_item
       @order.save
