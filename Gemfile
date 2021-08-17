@@ -63,3 +63,4 @@ gem 'rails-i18n'
 gem 'ransack'
 gem 'rename'
 gem "aws-sdk-s3", require: false
+gem 'dotenv-rails'
