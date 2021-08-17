@@ -52,7 +52,7 @@ class MusicsController < ApplicationController
   private 
 
   def music_params
-    params.require(:music).permit(:musics_name, :description, :genre_id, :image_id, :sound, :price).merge(user_id: current_user.id)
+    params.require(:music).permit(:musics_name, :description, :genre_id, :image_id, :sound).merge(user_id: current_user.id)
   end
 
   def search_product
