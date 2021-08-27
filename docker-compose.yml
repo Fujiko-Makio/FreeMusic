@@ -1,7 +1,5 @@
-# docker-composeのバージョンを指定します。今回は'3'を使用。
 version: '3'
 
-# 起動するコンテナの定義を行います。このファイルではdb, db-test , webの三つを定義しています。 
 services:
   db:
     image: mysql:8.0
