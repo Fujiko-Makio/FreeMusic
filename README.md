@@ -83,16 +83,6 @@
 
 # 🌐 本番環境
 ### Url：https://obscure-spire-59218.herokuapp.com/
-### Basic認証
-### ・ ID：fujiwara
-### ・ Pass：0630
-### ログイン情報(テスト用)
-## テストユーザー１
-### ・ Eメール：a@a
-### ・ パスワード：mmm111
-## テストユーザー２
-### ・ Eメール：b@b
-### ・ パスワード：mmm222
 
 
 # 🌐 DB設計
