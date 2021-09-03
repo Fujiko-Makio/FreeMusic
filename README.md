@@ -12,7 +12,8 @@
 ### Dockerを用いたアプリケーションURL
 ### https://freemusic-docker-mak.herokuapp.com/
 
-### ・Url：https://obscure-spire-59218.herokuapp.com/
+### ・HerokuにてデプロイしたURL
+### https://obscure-spire-59218.herokuapp.com/
 
 
 
@@ -26,9 +27,6 @@
 ### ・ Dockerを用いてHerokuへのデプロイ
 
 # 🌐 現在の課題や今後実装したい機能
-## 課題
-### 機能面
-- Dockerの導入後ローカルではアプリが立ち上がるが、本番環境にデプロイ後アプリケーションエラーが生じる。
 ## 今後実装したい機能
 - AWSへのデプロイ
 - CircleCiを導入し自動テストと自動デプロイの導入
