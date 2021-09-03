@@ -7,6 +7,15 @@
 ### ＊はじめに：当アプリケーションは最初Macによりある程度作成し、その後windowsへ移行して作成を進めているため、改めてwindowsの環境構築を行い現在も制作中です。
 ### ・自身の動画編集経験より楽曲やBGMなどの利用する際に簡単に検索でき、購入やダウンロードをしやすいアプリケーションの開発したかった。また音楽活動経験より、バンド間でデモの曲を確認する際、既存のwebサービスだと手間と時間がかかりファイルでの曲の管理なども面倒になると考え、バンド間で曲のやり取りをする際にバンドだけの曲のストレージ管理としても当アプリケーションは役に立つと考えた。
 
+# 🌐 本番環境URL
+### ---Heroku---
+### Dockerを用いたアプリケーションURL
+### https://freemusic-docker-mak.herokuapp.com/
+
+### ・Url：https://obscure-spire-59218.herokuapp.com/
+
+
+
 # 🌐 工夫したポイント
 ### ・ Active_Hashを利用したカテゴリー一覧よりransackを用いての検索
 ### ・ Amazon Simple Storage Service(S3)を用いたストレージの管理
@@ -14,6 +23,7 @@
 ### ・ N+1問題を意識した検索機能、ユーザー詳細機能
 ### ・ MP3ファイルの保存機能、それ以外のファイルでは保存できないようにする処理。
 ### ・ Dockerコンテナの作成
+### ・ Dockerを用いてHerokuへのデプロイ
 
 # 🌐 現在の課題や今後実装したい機能
 ## 課題
@@ -37,7 +47,7 @@
 ### HTML, CSS
 
 # データベース
-### MySQL8:0
+### MySQL8.0
 
 # Webサーバー(本番環境)
 ### Heroku
@@ -82,9 +92,6 @@
 [![Image from Gyazo](https://i.gyazo.com/3e11b6eeb68009db6155d7868f5578f3.png)](https://gyazo.com/3e11b6eeb68009db6155d7868f5578f3)
 ### ログアウトしている場合は詳細ページに遷移しても再生ボタンは表示されません。また新規登録ページへのリンクが表示されるようになっています。
 [![Image from Gyazo](https://i.gyazo.com/fb53b40d22778ebbe4f06305512d1ee4.png)](https://gyazo.com/fb53b40d22778ebbe4f06305512d1ee4)
-
-# 🌐 本番環境
-### Url：https://obscure-spire-59218.herokuapp.com/
 
 
 # 🌐 DB設計
