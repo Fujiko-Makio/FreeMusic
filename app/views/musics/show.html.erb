@@ -20,16 +20,6 @@
       <audio src="<%= rails_blob_path(@music.sound) %>" type="audio/mp3" controls controlslist="nodownload"></audio>
     <% end %>
   <% end %>
-  <% if user_signed_in? %>
-    <div class="item-explain-box">
-    <%= link_to "楽曲の購入はこちら", music_orders_path(@music) %>
-    </div>
-  <% else %>
-    <div class="item-explain-box"> 
-    <p>楽曲の視聴は会員登録してください</p>
-    <%= link_to "新規登録はこちら", new_user_registration_path %>
-    </div>
-  <% end %>
     <table class="detail-table">
       <tbody>
         <tr>
