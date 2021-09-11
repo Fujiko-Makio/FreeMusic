@@ -51,7 +51,9 @@
 ### MySQL8.0
 
 # Webサーバー(本番環境)
-### Heroku
+### Heroku,  AWS, 
+### Nginx
+### Puma, Unicorn
 
 # ソース管理
 ### Git, GitHub
