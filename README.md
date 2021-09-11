@@ -9,7 +9,7 @@
 
 # 🌐 本番環境URL
 ### ---AWS---
-### 35.75.123.67(Elastic IP)
+### http://35.75.123.67/ (Elastic IP)
 ### ---Heroku---
 ### Dockerを用いたアプリケーションURL
 ### https://freemusic-docker-mak.herokuapp.com/
