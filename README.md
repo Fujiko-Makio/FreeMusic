@@ -31,12 +31,12 @@
 
 # 🌐 現在の課題や今後実装したい機能
 ## 今後実装したい機能
-- CircleCiを導入し自動テストと自動デプロイの導入
-- Amazon Elastic Container Serviceを利用してDockerコンテナのAWSへのデプロイ
-- レスポンシブWebデザインの設定
-- 楽曲により有料、無料の選択機能
-- 購入機能の追加
-- ゲストユーザーログイン機能
+### - CircleCiを導入し自動テストと自動デプロイの導入
+### - Amazon Elastic Container Serviceを利用してDockerコンテナのAWSへのデプロイ
+### - レスポンシブWebデザインの設定
+### - 楽曲により有料、無料の選択機能
+### - 購入機能の追加
+### - ゲストユーザーログイン機能
 
 # 🌐 使用技術(開発環境)
 ## バックエンド
@@ -51,7 +51,7 @@
 ### MySQL8.0
 
 # Webサーバー(本番環境)
-### Heroku,  AWS, 
+### AWS, Heroku, 
 ### Nginx
 ### Puma, Unicorn
 
