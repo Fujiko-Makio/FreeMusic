@@ -50,10 +50,12 @@
 # データベース
 ### MySQL8.0
 
-# Webサーバー(本番環境)
-### AWS, Heroku, 
+# サーバー 
 ### Nginx
 ### Puma, Unicorn
+
+# インフラ
+### AWS, Heroku,
 
 # ソース管理
 ### Git, GitHub
